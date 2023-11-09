@@ -1,0 +1,10 @@
+= En conclusion
+
+[%step]
+* C'est au service appelé de configurer les en-têtes CORS
+* Attention aux intermédiaires
+* Regardez le retour effectif de la requête
+* Pensez à tous les endroits d'où sont appelés vos services
+* Consultez la doc de votre framework
+
+

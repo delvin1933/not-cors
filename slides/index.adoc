@@ -1,0 +1,21 @@
+= Mais non, c'est pas une erreur de CORS
+Christophe Farges
+:toc-title:
+:toc: macro
+:toclevels: 1
+:source-highlighter: highlightjs
+:autofit-option:
+:icons: font
+:revealjs_slideNumber: true
+:revealjs_history: true
+:revealjs_theme: sky
+:revealjs_pdfseparatefragments: false
+:revealjs_plugins: /home/reveal.js/revealjs-plugins.js
+:revealjs_plugins_configuration: /home/reveal.js/revealjs-plugins-conf.js
+:customcss: css/custom.css
+
+include::01-about-cors.adoc[leveloffset=+1]
+include::02-demo.adoc[leveloffset=+1]
+include::03-conclusion.adoc[leveloffset=+1]
+include::04-Fin.adoc[leveloffset=+1]
+

@@ -1,0 +1,39 @@
+body:after {
+    content: url("logo-devfest_small.png");
+    position: fixed;
+    left: 0;
+    bottom: 0;;
+}
+
+.profile>img {
+    border-style: none;
+    border-radius: 50px;
+}
+
+.screenshot>img {
+    max-width: 200%;
+    max-height: fit-content;
+    border-style: none;
+    position: absolute;
+    width: 1500px;
+    top: -60px;
+    left: -270px;
+}
+
+.reveal p {
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.reveal {
+    font-family: "Avenir Next LT Pro", Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #6F6F6F;
+}
+
+#demo {
+ width: 90%;
+ height: 50rem;
+    margin-top: -20rem;
+}

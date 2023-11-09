@@ -1,0 +1,239 @@
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>Démo hallucinante</title>
+    <style>button {
+        font-size: 30px;
+    }
+
+    li {
+        list-style: none;
+        padding-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding-left: 40px;
+    }
+
+    .browser-header__tab, .browser-header__bar {
+        background-color: lightgray;
+
+    }
+
+    .browser-header__tab {
+        display: flex;
+        flex-direction: row;
+        background-color: grey;
+    }
+
+    .browser-header__tab__cross {
+        border-radius: 0 5px 0 0 ;
+        width: 250px;
+        height: 30px;
+        text-align: left;
+        background-color: lightgray;
+    }
+
+    .browser-header__tab__remaining {
+        flex: 1 1;
+    }
+
+    .browser-header__bar {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        padding: 10px;
+        align-items: center;
+
+    }
+
+    .browser-header__bar > * {
+        flex: 35px 0 0;
+    }
+
+    .brower-header__bar__input {
+        flex: 1 1;
+        font-size: 34px;
+        line-height: 34px;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+    }
+    .icon{
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<div class="browser-header">
+    <div class="browser-header__tab">
+        <div class="browser-header__tab__cross">
+            <img src="static/close-line.svg" class="icon">
+        </div>
+        <div class="browser-header__tab__remaining"></div>
+    </div>
+    <div class="browser-header__bar">
+        <div class="browser-header__bar__previous">
+            <img src="static/arrow-left-line.svg" class="icon">
+        </div>
+        <div class="browser-header__bar__next">
+            <img src="static/arrow-right-line.svg" class="icon">
+        </div>
+        <div class="browser-header__bar__refresh">
+
+            <img src="static/restart-line.svg" class="icon">
+        </div>
+        <div class="static/browser-header__bar__home">
+
+            <img src="static/home-2-line.svg" class="icon">
+        </div>
+        <input class="brower-header__bar__input" type="text" value="http://localhost:3000">
+    </div>
+</div>
+
+<h1>Démo hallucinante</h1>
+
+
+<ul>
+    <li>
+        <button id="example-2" onclick="example_two()">Get, ça se corse</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-25" onclick="example_two_half()">Get, et ces headers alors ?</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-1" onclick="example_one()">Get, tout va bien</button>
+    </li>
+
+    <br>
+    <li>
+        <button id="example-4" onclick="example_four()">Post, c'est quoi ce OPTIONS ?</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-5" onclick="example_five()">Post, CPT</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-6" onclick="example_six()">Post, m'enfin, on m'a pas dit</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-3" onclick="example_three()">Post, tout marche bien navette</button>
+    </li>
+</ul>
+
+
+<script>
+
+    function example_one() {
+        fetch('http://localhost:4000/data.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_two() {
+        fetch('http://localhost:4001/data.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_two_half() {
+        fetch('http://localhost:4005/data.json', {
+                method: "GET",
+                mode: "cors",
+            }
+        )
+            //.then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_three() {
+        var data = {
+            name: "Donald Duck",
+            email: "donald@duck.org"
+        };
+
+        fetch('http://localhost:4002/user',
+            {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_four() {
+        var data = {
+            name: "Donald Duck",
+            email: "donald@duck.org"
+        };
+
+        fetch('http://localhost:4003/user',
+            {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_five() {
+
+        var data = {
+            name: "Donald Duck",
+            email: "donald@duck.org"
+        };
+
+        fetch('http://localhost:4004/user',
+            {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            //.then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_six() {
+
+        var data = {
+            name: "Donald Duck",
+            email: "donald@duck.org"
+        };
+
+        fetch('http://api.mon-app.example:4006/user',
+            {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+            //.then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+
+</script>

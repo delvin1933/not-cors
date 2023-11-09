@@ -1,0 +1,4 @@
+= Merci
+
+[.columns.profile]
+image::pictures/qr_openfeedback.png[width=50%]
