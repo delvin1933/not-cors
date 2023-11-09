@@ -32,8 +32,18 @@ body:after {
     color: #6F6F6F;
 }
 
-#demo {
- width: 90%;
- height: 50rem;
-    margin-top: -20rem;
+@media (orientation: portrait) {
+    #demo {
+        width: 90%;
+        height: 50rem;
+        margin-top: -20rem;
+    }
+}
+
+@media (orientation: landscape) {
+    #demo {
+        width: 90%;
+        height: 25rem;
+        margin-top: -5rem;
+    }
 }
