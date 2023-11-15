@@ -2,9 +2,9 @@
 
 [NOTE.speaker]
 --
-Plusieurs démo avec plusieurs cas de figure
+backend qui tape sur api.mon-app.com
 
-quand ça se passe bien et moins bien
+application en local
 
 --
 
@@ -13,3 +13,17 @@ quand ça se passe bien et moins bien
 ++++
 <iframe id="demo" src="http://localhost:3000"></iframe>
 ++++
+
+
+[NOTE.speaker]
+--
+RALENTI
+
+ex 2 requete simple , pas de preflight
+
+Le backend répond 200 malgré l'erreur donc le taf est fait coté serveur
+
+
+
+
+--

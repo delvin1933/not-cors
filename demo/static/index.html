@@ -136,19 +136,19 @@
 <script>
 
     function example_one() {
-        fetch('http://localhost:4000/data.json')
+        fetch('http://api.mon-app.example:4000/data.json')
             .then(response => response.json())
             .then(data => console.log(data));
     }
 
     function example_two() {
-        fetch('http://localhost:4001/data.json')
+        fetch('http://api.mon-app.example:4001/data.json')
             .then(response => response.json())
             .then(data => console.log(data));
     }
 
     function example_two_half() {
-        fetch('http://localhost:4005/data.json', {
+        fetch('http://api.mon-app.example:4005/data.json', {
                 method: "GET",
                 mode: "cors",
             }
@@ -163,7 +163,7 @@
             email: "donald@duck.org"
         };
 
-        fetch('http://localhost:4002/user',
+        fetch('http://api.mon-app.example:4002/user',
             {
                 method: "POST",
                 mode: "cors",
@@ -182,7 +182,7 @@
             email: "donald@duck.org"
         };
 
-        fetch('http://localhost:4003/user',
+        fetch('http://api.mon-app.example:4003/user',
             {
                 method: "POST",
                 mode: "cors",
@@ -202,7 +202,7 @@
             email: "donald@duck.org"
         };
 
-        fetch('http://localhost:4004/user',
+        fetch('http://api.mon-app.example:4004/user',
             {
                 method: "POST",
                 mode: "cors",

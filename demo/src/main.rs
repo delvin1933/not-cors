@@ -82,7 +82,9 @@ async fn main() {
                 .allow_origin("http://localhost:3000".parse::<HeaderValue>().unwrap())
                 .allow_methods([Method::POST, Method::OPTIONS])
                 .allow_headers([http::header::CONTENT_TYPE]),
-        ).post(accept_form));
+        ).post(accept_form)
+
+        );
         serve(app, 4003).await;
     };
 
@@ -107,7 +109,7 @@ async fn main() {
                     .allow_headers([http::header::CONTENT_TYPE]),
             )).route("/user",post(accept_error).layer(
             CorsLayer::new()
-                .allow_origin("http://localhost:4000".parse::<HeaderValue>().unwrap())
+            //    .allow_origin("http://localhost:4000".parse::<HeaderValue>().unwrap())
 
                 .allow_methods([Method::OPTIONS,Method::POST])
                 .allow_headers([http::header::CONTENT_TYPE])));
@@ -123,7 +125,7 @@ async fn main() {
                     .allow_headers([http::header::CONTENT_TYPE]),
             )).route("/user",post(accept_form).layer(
             CorsLayer::new()
-                .allow_origin("http://localhost:4000".parse::<HeaderValue>().unwrap())
+                .allow_origin("http://localhost:4259".parse::<HeaderValue>().unwrap())
 
                 .allow_methods([Method::OPTIONS,Method::POST])
                 .allow_headers([http::header::CONTENT_TYPE])));
