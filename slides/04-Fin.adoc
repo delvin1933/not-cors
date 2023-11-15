@@ -1,4 +1,18 @@
+:figure-caption!:
+
+[.columns]
 = Merci
 
-[.columns.profile]
-image::pictures/qr_openfeedback.png[width=50%]
+[.column.is-half]
+--
+.Openfeedback
+[.profile]
+image::pictures/qr_openfeedback.png[width=70%]
+--
+
+[.column.is-half]
+--
+.Slides & sources
+[.profile]
+image::pictures/qr-github.png[width=70%]
+--
