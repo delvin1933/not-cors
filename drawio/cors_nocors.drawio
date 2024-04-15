@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-09T12:51:49.236Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.3.7 Chrome/112.0.5615.204 Electron/24.5.0 Safari/537.36" etag="aT4dUf91hTMH7i_EQ4dR" version="21.3.7" type="device">
+<mxfile host="Electron" modified="2024-04-08T15:15:33.777Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.3.7 Chrome/112.0.5615.204 Electron/24.5.0 Safari/537.36" etag="UNiY7sI-sg3twN5KzO7_" version="21.3.7" type="device">
   <diagram name="Page-1" id="6iHEjLcGqMGaxDop0hEK">
-    <mxGraphModel dx="607" dy="962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="607" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,10 +43,10 @@
         <mxCell id="UxVwWkC277Bq-PU8NcVB-13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=none;" parent="UxVwWkC277Bq-PU8NcVB-15" vertex="1">
           <mxGeometry x="20.416666666666664" y="559.9999999999999" width="449.16666666666663" height="29.999999999999996" as="geometry" />
         </mxCell>
-        <mxCell id="UxVwWkC277Bq-PU8NcVB-14" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;https://www.monapplication.com&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UxVwWkC277Bq-PU8NcVB-15" vertex="1">
+        <mxCell id="UxVwWkC277Bq-PU8NcVB-14" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;https://www.mon-app.com&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="UxVwWkC277Bq-PU8NcVB-15" vertex="1">
           <mxGeometry x="54.04166666666666" y="25" width="285.8333333333333" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="hlasfmhuNFYALX780gi1-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://i.imgflip.com/85fw68.jpg;" vertex="1" parent="UxVwWkC277Bq-PU8NcVB-15">
+        <mxCell id="hlasfmhuNFYALX780gi1-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://i.imgflip.com/85fw68.jpg;" parent="UxVwWkC277Bq-PU8NcVB-15" vertex="1">
           <mxGeometry x="198.18000000000006" y="90" width="266.4" height="219" as="geometry" />
         </mxCell>
         <mxCell id="UxVwWkC277Bq-PU8NcVB-16" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.servers.web_server_blue;" parent="1" vertex="1">
@@ -61,9 +61,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="UxVwWkC277Bq-PU8NcVB-32" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GET https://www.mon-application.com/index.html&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="UxVwWkC277Bq-PU8NcVB-19" vertex="1" connectable="0">
+        <mxCell id="UxVwWkC277Bq-PU8NcVB-32" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;GET https://www.mon-app.com/index.html&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="UxVwWkC277Bq-PU8NcVB-19" vertex="1" connectable="0">
           <mxGeometry x="-0.8" y="3" relative="1" as="geometry">
-            <mxPoint x="143" y="3" as="offset" />
+            <mxPoint x="134" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="UxVwWkC277Bq-PU8NcVB-33" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.servers.web_server_blue;" parent="1" vertex="1">
@@ -78,9 +78,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="UxVwWkC277Bq-PU8NcVB-35" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GET https://www.mon-application.com/app.min.js&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="UxVwWkC277Bq-PU8NcVB-34" vertex="1" connectable="0">
+        <mxCell id="UxVwWkC277Bq-PU8NcVB-35" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;POST https://www.mon-app.com/items&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" parent="UxVwWkC277Bq-PU8NcVB-34" vertex="1" connectable="0">
           <mxGeometry x="-0.8" y="3" relative="1" as="geometry">
-            <mxPoint x="143" y="3" as="offset" />
+            <mxPoint x="124" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>

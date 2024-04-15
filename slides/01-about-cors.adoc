@@ -8,14 +8,13 @@ image::pictures/moi.png[]
 
 [.column.has-text-left]
 --
-image::pictures/qrcode.png[width=200]
+image::pictures/ONEPOINT_RVB_BASELINE.png[width=300]
 
 Tech Lead/Archi technique
 --
 
 [NOTE.speaker]
 --
-QR Code
 Dev backend, mise en place infra
 travail avec dev front
 
@@ -23,7 +22,6 @@ travail avec dev front
 
 == Les erreurs CORS ?
 
-== !
 
 image::pictures/pacellela2.jpg[width=50%]]
 
@@ -33,59 +31,41 @@ Pas celles là
 
 --
 
+[.trigger-anim]
 == !
 
-[.screenshot]
+[.screen-cors.screenshot]
 image::pictures/cellela.png[width=130%]
 
+[%step]
+[.screen-cors.screen-anim.anim1]
+image::pictures/cellela.png[width=20%]
+[%step]
+[.screen-cors.screen-anim.anim2]
+image::pictures/cellela.png[width=20%]
+[%step]
+[.screen-cors.screen-anim.anim3]
+image::pictures/cellela.png[width=20%]
 
 [NOTE.speaker]
 --
 Celles là
 
---
+qu'on rencontre lors de nos dev
 
+dans le navigateur
 
-== Et ça consiste en quoi ?
-// animation ?
-// les étapes suivantes, mais en schémas
-
-
-[.columns.profile]
-image::pictures/cors_nocors.drawio.png[width=90%]
-
-
-[NOTE.speaker]
---
-
-pas de cors parce qu'on est sur le même domaine !
+Il se passe quoi si ça existe pas
 
 --
-
-== CORS Triggered
-
-[.columns.profile]
-image::pictures/cors_with_cors.drawio.png[width=90%]
-
-
-[NOTE.speaker]
---
-
-2 types d'appels cors simple et complexe
-
-OPTIONS => Preflight
-
-sans options et avec options
-
---
-
 
 == Je suis maître méchant
 
-image::pictures/nocors_evil.drawio.png[width=90%]
+image::pictures/nocors_evil3.drawio.png[width=90%]
 
 [NOTE.speaker]
 --
+Pas de mécanisme CORS
 
 Si je suis loggé sur gmail
 
@@ -101,15 +81,91 @@ les entêtes étant dans la réponse, le serveur travaille quand même
 --
 
 
+== Alors là, non
+// animation ?
+// les étapes suivantes, mais en schémas
+
+
+[.columns.profile]
+image::pictures/cors_nocors_new.drawio.png[width=90%]
+
+
+[NOTE.speaker]
+--
+
+pas de cors parce qu'on est sur le même domaine !
+
+--
+[%auto-animate]
+== CORS Triggered
+
+[.columns.profile]
+image::pictures/cors_with_cors_1.drawio.png[width=90%]
+
+
+[NOTE.speaker]
+--
+
+CORS => Cross Origin Ressource Sharing
+
+Dans le navigateur
+
+2 types d'appels cors simple et complexe
+
+OPTIONS => Preflight
+
+sans options et avec options
+
+--
+
+[%auto-animate]
+== CORS Triggered
+
+[.columns.profile]
+image::pictures/cors_with_cors_2.drawio.png[width=90%]
+
+[NOTE.speaker]
+--
+
+OPTIONS => Preflight
+
+sans options et avec options
+
+POST avec content-type
+  application/x-www-form-urlencoded
+  multipart/form-data
+  text/plain
+=> pas de preflight
+
+autre chose dans content-type => preflight
+
+--
+
+
+
+// [%auto-animate]
+// == CORS Triggered
+//
+// [.columns.profile]
+// image::pictures/cors_with_cors_3.drawio.png[width=90%]
+
+
 [.columns]
 == Tout est dans la tête
 
+[%step]
 [.column.is-half]
 * Origin
 * Access-Control-Allow-Origin
 * Access-Control-Allow-Methods
 * Access-Control-Allow-Headers
 * ...
+* Consulter la documentation MDN
 
 [.column]
 image::pictures/homer.jpg[width=80%]
+
+[NOTE.speaker]
+--
+Spécifie un ensemble de headers HTTP que le navigateur va interpréter
+--

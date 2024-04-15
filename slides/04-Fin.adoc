@@ -7,7 +7,7 @@
 --
 .Openfeedback
 [.profile]
-image::pictures/qr_openfeedback.png[width=70%]
+image::pictures/qr-code-devoxx.png[width=70%]
 --
 
 [.column.is-half]

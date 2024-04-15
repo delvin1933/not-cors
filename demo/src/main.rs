@@ -41,6 +41,7 @@ async fn main() {
         let app = Router::new().route("/data.json", get(json)).layer(
             CorsLayer::new()
                 .allow_origin(origins)
+                .allow_headers([http::header::CONTENT_TYPE])
 
         );
         serve(app, 4000).await;
@@ -49,19 +50,27 @@ async fn main() {
     let example2 = async {
         let app = Router::new().route("/data.json", get(json)).layer(
             CorsLayer::new()
-                .allow_origin("http://localhost:3001".parse::<HeaderValue>().unwrap())
+                .allow_origin("http://api.mon-app.example:4001".parse::<HeaderValue>().unwrap())
         );
         serve(app, 4001).await;
     };
 
     let example2etdemi = async {
+
+        let origins2 = [
+            "http://api.mon-app.example:4001".parse::<HeaderValue>().unwrap(),
+            "http://localhost:3000".parse::<HeaderValue>().unwrap(),
+        ];
+
         let app = Router::new().route("/data.json", get(json2)).layer(
             CorsLayer::new()
-                .allow_origin("http://localhost:3000".parse::<HeaderValue>().unwrap())
+                .allow_origin(origins2)
         )
             ;
         serve(app, 4005).await;
     };
+    
+    
 
 
     let example3 = async {
@@ -125,7 +134,7 @@ async fn main() {
                     .allow_headers([http::header::CONTENT_TYPE]),
             )).route("/user",post(accept_form).layer(
             CorsLayer::new()
-                .allow_origin("http://localhost:4259".parse::<HeaderValue>().unwrap())
+                .allow_origin("http://corporate-reporter.net:4259".parse::<HeaderValue>().unwrap())
 
                 .allow_methods([Method::OPTIONS,Method::POST])
                 .allow_headers([http::header::CONTENT_TYPE])));

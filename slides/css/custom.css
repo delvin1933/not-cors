@@ -1,23 +1,105 @@
+@font-face {
+    font-family: 'Pirulen RG';
+    src: url('./Pirulen/pirulen rg.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --r-heading1-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
 body:after {
-    content: url("logo-devfest_small.png");
+    content: url("logo-texte-devoxx-france-2-lignes-400.png");
     position: fixed;
     left: 0;
     bottom: 0;;
 }
 
+/*.reveal .couverture{*/
+/*    background-color: #222;*/
+/*}*/
+
+.reveal section.title h1 {
+    font-family: "Pirulen RG";
+    /*background-color: #333;*/
+    color: white;
+    font-size: 80px;
+    text-shadow: var(--r-heading1-text-shadow);
+
+    font-weight: 700;
+    letter-spacing: normal;
+    /*font-weight: var(--r-heading-font-weight);*/
+    /*line-height: var(--r-heading-line-height);*/
+    /*letter-spacing: var(--r-heading-letter-spacing);*/
+    /*text-transform: var(--r-heading-text-transform);*/
+
+}
+
+/*.reveal section.title {*/
+/*    background-color: #222;*/
+/*}*/
+
+.reveal  .slide-background-content {
+    opacity: 70%;
+}
 .profile>img {
     border-style: none;
     border-radius: 50px;
 }
 
-.screenshot>img {
+.screen-cors>img {
     max-width: 200%;
     max-height: fit-content;
     border-style: none;
     position: absolute;
+}
+
+.screen-anim>img {
+    /*animation: .3s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;*/
+}
+
+.screenshot>img {
     width: 1500px;
-    top: -60px;
+    top: 260px;
     left: -270px;
+}
+
+.anim1>img {
+    width: 1000px;
+    top: 250px;
+    left: -270px;
+    transform: rotate(30deg);
+    animation-delay: 1.8s;
+}
+
+.anim2>img {
+    width: 1200px;
+    top: 450px;
+    left: 130px;
+    transform: rotate(-85deg);
+    animation-delay: 2.5s;
+}
+
+.anim3>img {
+    width: 2500px;
+    top: 0px;
+    left: -80px;
+    transform: rotate(137deg);
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
 }
 
 .reveal p {

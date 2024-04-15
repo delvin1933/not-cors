@@ -103,28 +103,34 @@
 
 <ul>
     <li>
-        <button id="example-2" onclick="example_two()">Get, ça se corse</button>
+        <button id="example-2" onclick="example_get_cors_error()">Get, ça se corse</button>
     </li>
     <br>
     <li>
-        <button id="example-25" onclick="example_two_half()">Get, et ces headers alors ?</button>
+        <button id="example-25" onclick="example_get_acam_post()">Get, et ces headers alors ?</button>
     </li>
     <br>
     <li>
-        <button id="example-1" onclick="example_one()">Get, enfin, ça marche</button>
+        <button id="example-get-preflight" onclick="example_get_preflight()">Get, à l'aréoport de Nice</button>
     </li>
+    <br>
+
+    <li>
+        <button id="example-1" onclick="example_get_working()">Get, enfin, ça marche</button>
+    </li>
+
 
     <br>
     <li>
-        <button id="example-4" onclick="example_four()">Post, c'est quoi ce OPTIONS ?</button>
-    </li>
-    <br>
-    <li>
-        <button id="example-5" onclick="example_five()">Post, CPT</button>
+        <button id="example-4" onclick="example_post_with_options()">Post, encore ce OPTIONS ?</button>
     </li>
     <br>
     <li>
         <button id="example-6" onclick="example_six()">Post, m'enfin, on m'a pas dit</button>
+    </li>
+    <br>
+    <li>
+        <button id="example-5" onclick="example_five()">Post, mais non, c'est pas une erreur de CORS</button>
     </li>
     <br>
     <li>
@@ -135,25 +141,49 @@
 
 <script>
 
-    function example_one() {
-        fetch('http://api.mon-app.example:4000/data.json')
+    function example_get_working() {
+        // fetch('http://api.mon-app.example:4000/data.json')
+        //     .then(response => response.json())
+        //     .then(data => console.log(data));
+
+
+        fetch('http://api.mon-app.example:4000/data.json', {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "json",
+            },
+        })
             .then(response => response.json())
             .then(data => console.log(data));
+
     }
 
-    function example_two() {
+    function example_get_cors_error() {
         fetch('http://api.mon-app.example:4001/data.json')
             .then(response => response.json())
             .then(data => console.log(data));
     }
 
-    function example_two_half() {
+    function example_get_acam_post() {
         fetch('http://api.mon-app.example:4005/data.json', {
                 method: "GET",
                 mode: "cors",
             }
         )
             //.then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    function example_get_preflight() {
+        fetch('http://api.mon-app.example:4000/data.json', {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "ContentType": "fr-FR",
+            },
+        })
+            .then(response => response.json())
             .then(data => console.log(data));
     }
 
@@ -176,7 +206,7 @@
             .then(data => console.log(data));
     }
 
-    function example_four() {
+    function example_post_with_options() {
         var data = {
             name: "Donald Duck",
             email: "donald@duck.org"

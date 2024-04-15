@@ -3,8 +3,9 @@
 [NOTE.speaker]
 --
 backend qui tape sur api.mon-app.com
-
 application en local
+
+
 
 --
 
@@ -19,10 +20,22 @@ application en local
 --
 RALENTI
 
-ex 2 requete simple , pas de preflight
+GET Ca se corse : le backend a pas été configuré du tout pour localhost
 
-Le backend répond 200 malgré l'erreur donc le taf est fait coté serveur
+GET Et ces headers alors : configuré,  access-control-allow-methods: POST ignoré
 
+GET A l'areoport : GET peut déclencher un preflight contenttype sans -
+
+GET ça marche : tout est résolu
+
+
+POST c'est quoi : pas d'entête cors dans la réponse
+réponse 200 : Le taf est fait côté serveur
+
+POST M'enfin : valeur différente => API Manager qui a un changement de conf, pareil
+réponse 200 : le taf est fait côté serveur
+
+POST Mais non : erreur 500, pas de header Pas une erreur CORS en soit
 
 
 
