@@ -5,7 +5,7 @@
 
 [.column.is-half]
 --
-.Openfeedback
+.Feedback
 [.profile]
 image::pictures/qr-code-devoxx.png[width=70%]
 --
